@@ -1,0 +1,58 @@
+* Maintaining config files
+I am currently using etckeeper, which up to now is doing a good
+job. But my asterisk config was already in its own repo.
+** Prepare repo
+#+BEGIN_SRC shell-script
+$ cd /path/to/config/dir
+$ git init .
+$ git add .
+$ git commit -v
+#END_SRC
+** Updating
+Before any major update, create a new branch for it:
+src_sh{$ git checkout -b v1.4.1}
+Update package, accept all packager defaults, commit changes return to master branch and merge changes:
+$ git comm
+* Understanding git
+** pull vs. push
+[[http://longair.net/blog/2011/02/27/an-asymmetry-between-git-pull-and-git-push/][Mark Longair]] explains the main differences between pull and push,
+showing that they are not really simmetric. It's curious how I have
+come to love git even if I do not understand all its concepts and I've
+never had the occasion to use its advanced features. [[http://longair.net/blog/2009/04/16/git-fetch-and-merge/][Elsewhere]], he
+explains why one should fetch and merge instead of pulling; that's
+something to remember whenever I have the chance to really use
+multiple branches.
+* Using submodule
+Discovering submodules in git caused a great confusion in my
+life. From now on, everything I use must be in git; all my emacs code
+is in git, but third party modules must also have git
+dirs. Fortunately I was not the first to come to this conclusion, so
+everything I have searched until now was easily found.
+** References
+[[http://blog.endpoint.com/2010/04/git-submodule-workflow.html][Git submodule workflow]]
+** Importing submodule
+$ git submodule add /path/to/repo
+$ git submodule init
+$ git commit
+** Cloning superproject
+$ git clone /path/to/repo
+$ git submodule init
+$ git submodule update
+* Reverting git add
+Normally:
+$ git reset .
+If it's your first commit ([[http://stackoverflow.com/questions/348170/undo-git-add][ref]]):
+$ git rm --cached FILE
+* Emacs
+** Dired
+In order to git move a file in dired, use the ! command, followed by
+something like "git mv ? path/to/dir". The "?" means that the command
+will be issued once for each file, which I think is not necessary in
+this case.
+** Magit
+Magit is good. Period.
+** Egg
+Egg is a fork of magit; I don't know why I started using it. It's also handy to
+have the main keys written on status buffer. I was unable to commit
+only current region, as done in magit.
+

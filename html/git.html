@@ -1,0 +1,154 @@
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Maintaining config files </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>I am currently using etckeeper, which up to now is doing a good
+job. But my asterisk config was already in its own repo.
+</p>
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1">Prepare repo </h3>
+<div class="outline-text-3" id="text-1.1">
+
+<p>$ cd /path/to/config/dir
+$ git init .
+$ git add .
+$ git commit -v
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2">Updating </h3>
+<div class="outline-text-3" id="text-1.2">
+
+<p>Before any major update, create a new branch for it:
+src<sub>sh</sub>{$ git checkout -b v1.4.1}
+Update package, accept all packager defaults, commit changes return to master branch and merge changes:
+$ git comm
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Understanding git </h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1">pull vs. push </h3>
+<div class="outline-text-3" id="text-2.1">
+
+<p><a href="http://longair.net/blog/2011/02/27/an-asymmetry-between-git-pull-and-git-push/">Mark Longair</a> explains the main differences between pull and push,
+showing that they are not really simmetric. It's curious how I have
+come to love git even if I do not understand all its concepts and I've
+never had the occasion to use its advanced features. <a href="http://longair.net/blog/2009/04/16/git-fetch-and-merge/">Elsewhere</a>, he
+explains why one should fetch and merge instead of pulling; that's
+something to remember whenever I have the chance to really use
+multiple branches.
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Using submodule </h2>
+<div class="outline-text-2" id="text-3">
+
+<p>Discovering submodules in git caused a great confusion in my
+life. From now on, everything I use must be in git; all my emacs code
+is in git, but third party modules must also have git
+dirs. Fortunately I was not the first to come to this conclusion, so
+everything I have searched until now was easily found.
+</p>
+</div>
+
+<div id="outline-container-3.1" class="outline-3">
+<h3 id="sec-3.1">References </h3>
+<div class="outline-text-3" id="text-3.1">
+
+<p><a href="http://blog.endpoint.com/2010/04/git-submodule-workflow.html">Git submodule workflow</a>
+</p></div>
+
+</div>
+
+<div id="outline-container-3.2" class="outline-3">
+<h3 id="sec-3.2">Importing submodule </h3>
+<div class="outline-text-3" id="text-3.2">
+
+<p>$ git submodule add /path/to/repo
+$ git submodule init
+$ git commit
+</p></div>
+
+</div>
+
+<div id="outline-container-3.3" class="outline-3">
+<h3 id="sec-3.3">Cloning superproject </h3>
+<div class="outline-text-3" id="text-3.3">
+
+<p>$ git clone /path/to/repo
+$ git submodule init
+$ git submodule update
+</p></div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4">Reverting git add </h2>
+<div class="outline-text-2" id="text-4">
+
+<p>Normally:
+$ git reset .
+If it's your first commit (<a href="http://stackoverflow.com/questions/348170/undo-git-add">ref</a>):
+$ git rm &ndash;cached FILE
+</p></div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5">Emacs </h2>
+<div class="outline-text-2" id="text-5">
+
+
+</div>
+
+<div id="outline-container-5.1" class="outline-3">
+<h3 id="sec-5.1">Dired </h3>
+<div class="outline-text-3" id="text-5.1">
+
+<p>In order to git move a file in dired, use the ! command, followed by
+something like "git mv ? path/to/dir". The "?" means that the command
+will be issued once for each file, which I think is not necessary in
+this case.
+</p></div>
+
+</div>
+
+<div id="outline-container-5.2" class="outline-3">
+<h3 id="sec-5.2">Magit </h3>
+<div class="outline-text-3" id="text-5.2">
+
+<p>Magit is good. Period.
+</p></div>
+
+</div>
+
+<div id="outline-container-5.3" class="outline-3">
+<h3 id="sec-5.3">Egg </h3>
+<div class="outline-text-3" id="text-5.3">
+
+<p>Egg is a fork of magit; I don't know why I started using it. It's also handy to
+have the main keys written on status buffer. I was unable to commit
+only current region, as done in magit.
+</p>
+</div>
+</div>
+</div>

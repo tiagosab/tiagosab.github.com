@@ -1,0 +1,7 @@
+* IPython
+
+** Replacing print statements
+
+from IPython.Shell import IPShellEmbed
+ipshell = IPShellEmbed()
+ipshell() # this call anywhere in your program will start IPython
