@@ -1,0 +1,38 @@
+* Blogging                                                             :blog:
+  :PROPERTIES:
+  :subject:  blogging
+  :END:
+
+** Github and jekyll
+   :PROPERTIES:
+   :on:       <2011-06-09 Qui 23:33>
+   :END:
+
+I've never really liked blog interfaces. When I first found the emacs
+interface for logjam, I created an account and started using it. But I
+soon realized it was not very useful to me. I was not really able to
+easily search my blog entries, and it turned out that I almost never
+came back to them.
+
+And there's another point: I don't know if what I want is really a
+blog. I want somewhere to write, to share stuff I learn, to rant about
+software and capitalism, but the blog format is not exactly what I
+have in mind. I often want to come back to something, rewrite it, and
+the blog concept suppose you publish in a date and there it
+stays. Sure, there are plenty of blogs out there with further edits,
+but they look weird. If you make your changes in-line, the comments
+make no more sense; if you make them at the end of the post, the
+reader feels stupid when they read a long post about some interesting
+idea only to come to and 'EDIT:' line at the end and see something
+like "this turned out to be false".
+
+I started putting all my notes in git recently - I want everything to
+be in git. And I started taking notes in org-mode, in emacs, because
+it's the easier and faster way for me to get things done. So, when I
+discovered github pages with jekyll, it was a chock. I take my org
+files and generate something that is not really a blog, neither a
+website. It's what I want it to be (and what I am able to do with the
+available tools, of course).
+
+It's even easy to setup! It's not beautiful right now, but that is not
+my point. 
