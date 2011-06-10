@@ -1,1 +1,2 @@
-source: ./html
+---
+permalink: /:month-:day-:year/:title.html

@@ -1,4 +1,11 @@
-* Installation
+* dwm                                                                  :blog:
+  :PROPERTIES:
+  :lang:     dwm
+  :END:
+** Installation
+  :PROPERTIES:
+  :on:       <2011-06-09 Qui 22:35>
+  :END:
 I've followed the instructions on [[https://bitbucket.org/djpohly/dwm-patches/src][dwm patches]] then the instructions
 on the README. I had to make a ~.hgrc 
 
@@ -9,10 +16,13 @@ symbolically linked it.
 I have not even remembered to do "apt-get build-dep dwm" before
 compiling, but it seems everything was already here.
 
-* References
-** Gentoo wiki page on dwm
+** References
+*** Gentoo wiki page on dwm
 Useful tips to customize dwm bar.
 http://en.gentoo-wiki.com/wiki/Dwm
-** X key reference
+*** X key reference                                                    :blog:
+   :PROPERTIES:
+   :on:       <2011-06-09 Qui 22:28>
+   :END:
 All X key names are defined here:
 http://cgit.freedesktop.org/xorg/proto/x11proto/plain/keysymdef.h1

@@ -1,17 +1,18 @@
 #+BEGIN_HTML
 ---
 layout: default
-title: Benighted on the Ben.
-excerpt: An unplanned bivouac on Ben Nevis.
+title: Software for language studies
 ---
 #+END_HTML
-* Linguists software
+* Linguists software                                                :blog:on:
+<2011-06-09 Qui>
 
-** Useful links
-
+** Useful links                                                     :blog:on:
 http://www.concordancesoftware.co.uk/
 http://www.billposer.org/Linguistics/Computation/LectureNotes/Concordances.html
 http://www.tmoss.org/tmosswiki/index.php/Open_Source_Translation_Memory_Systems
 http://sourceforge.net/projects/pyge/
 http://pyge.sourceforge.net/
 http://www.nltk.org/
+
+<2011-06-09 Qui 21:48>
